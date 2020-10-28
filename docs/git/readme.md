@@ -1,6 +1,10 @@
 # Commands
 
 ```
+git init
+```
+
+```
 git config --global core.autocrlf true
 
 ```
