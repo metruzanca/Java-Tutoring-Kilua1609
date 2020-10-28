@@ -44,3 +44,7 @@ man git
 [Go to Second page](branching.md)
 
 [Back Home](../../readme.md)
+
+### TODO: 
+- [ ] git g
+- [ ] git rebase
