@@ -1,4 +1,4 @@
-# Commands
+# Basic Commands
 
 ```
 git init
@@ -41,6 +41,6 @@ git log
 man git
 ```
 
-[Go to Second page](exampleOtherFile.md)
+[Go to Second page](branching.md)
 
 [Back Home](../../readme.md)
