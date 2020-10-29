@@ -35,6 +35,6 @@ class Cane {
 ```
 ![](../assets/objects1.png)
 
-[Go to Second page](branching.md)
+[Back to index page](readme.md)
 
 [Back Home](../../readme.md)
