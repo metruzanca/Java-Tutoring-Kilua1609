@@ -34,3 +34,7 @@ class Cane {
     }
 ```
 ![](../assets/objects1.png)
+
+[Go to Second page](branching.md)
+
+[Back Home](../../readme.md)
