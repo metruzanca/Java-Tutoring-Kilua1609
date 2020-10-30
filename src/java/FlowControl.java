@@ -9,9 +9,12 @@ public class FlowControl {
     // lista[3] = 4;
     // lista[4] = 5;
 
-    Integer[] lista = new Integer[] { 1, 2, 3, 4, 5 };
-    // printAll(lista);
-    System.out.println(multiplesOf2(lista));
+    // Non toccare questa parte del main
+    int[][] listaDiListe = new int[][] { { 1, 2, 3, 4, 5 }, { 20, 5, -2, 0, 21 } };
+    for (int[] lista : listaDiListe) {
+      int max = getMax(lista);
+      System.out.println(max);
+    }
   }
 
   // Per metru
