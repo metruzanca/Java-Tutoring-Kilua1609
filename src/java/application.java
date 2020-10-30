@@ -5,9 +5,11 @@ class HelloWorld {
     }
 
     public static void main(String[] argv) {
-        Gatto g = new Gatto("Garfield", 2, true);
-        log(g.isAlive());
+        
     }
+       
+        
+    
 
 }
 
