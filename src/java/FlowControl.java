@@ -83,7 +83,7 @@ public class FlowControl {
   // }
 
   public static int getMax(int[] list) {
-    return 0;
+    return 10;
   }
 
   // public static int getMin(int[] list) {
