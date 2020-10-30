@@ -5,12 +5,9 @@ class HelloWorld {
     }
 
     public static void main(String[] argv) {
-        
+        Gatto g = new Gatto("Garfield", 2, false);
+        log(g.isAlive());
     }
-       
-        
-    
-
 }
 
 class Gatto {
@@ -24,24 +21,18 @@ class Gatto {
         this.alive = alive;
     }
 
-    // TODO costructor that accepts name and age with alive defaulting to true
-
-    public String isAlive(String name, Integer age, Boolean alive) {
+    public Gatto(String name, Integer age) {
         this.name = name;
         this.age = age;
-        alive = true;
+        this.alive = true;
+    }
 
-        if (alive = true)  {
-
-            System.out.println("My name is "+name);
-            System.out.println("i'm "+age);
-            System.out.println("and i'm alive");
+    public String isAlive() {
+        if (alive) {
+            return "I'm name " + name + ". im " + age + " old";
+        } else {
+            return "I'm dead";
         }
-        else {
-            System.out.println("My name is "+name);
-            System.out.println("and i'm dead");
-        }
-        
-        return name;
+        // TODO Ternary operator
     }
 }
