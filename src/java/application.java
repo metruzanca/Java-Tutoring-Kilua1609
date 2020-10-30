@@ -24,9 +24,22 @@ class Gatto {
 
     // TODO costructor that accepts name and age with alive defaulting to true
 
-    public String isAlive() {
-        // TODO if dead say "I'm dead"
-        // TODO if alive say "Im name, im age old"
-        return "todo";
+    public String isAlive(String name, Integer age, Boolean alive) {
+        this.name = name;
+        this.age = age;
+        alive = true;
+
+        if (alive = true)  {
+
+            System.out.println("My name is "+name);
+            System.out.println("i'm "+age);
+            System.out.println("and i'm alive");
+        }
+        else {
+            System.out.println("My name is "+name);
+            System.out.println("and i'm dead");
+        }
+        
+        return name;
     }
 }
