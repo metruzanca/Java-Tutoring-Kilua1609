@@ -1,41 +1,93 @@
+import java.util.ArrayList;
+
 public class FlowControl {
   public static void main(String[] args) {
-    int[] lista = new int[5];
-    lista[0] = 1;
-    lista[1] = 5;
-    lista[2] = 7;
-    lista[3] = 3;
-    lista[4] = 9;
-    
-    printAll(lista);
+    // int[] lista = new int[5];
+    // lista[0] = 1;
+    // lista[1] = 2;
+    // lista[2] = 3;
+    // lista[3] = 4;
+    // lista[4] = 5;
+
+    Integer[] lista = new Integer[] { 1, 2, 3, 4, 5 };
+    // printAll(lista);
+    System.out.println(multiplesOf2(lista));
+  }
+
+  // Per metru
+  // TODO break;
+  // TODO continue;
+  // TODO exercise with while, do while and for
+
+  public static ArrayList<Integer> multiplesOf2(Integer[] list) {
+    ArrayList<Integer> response = new ArrayList<Integer>();
+    for (int item : list) {
+      if (item % 2 == 0) {
+        response.add(item);
+      }
+    }
+    return response;
+  }
+
+  // TODO
+  // public static int[][] generateMatrix() {
+
+  // }
+
+  /* questa è definita come la signature del metodo */
+  public static void printAll(int[] listoni) {
+    // System.out.println("---- While ----");
+    // int i = 0;
+    // do {
+    // System.out.println(listoni[i]);
+    // i++;
+    // } while (i < listoni.length);
+
+    // System.out.println("---- Do While ----");
+
+    // int ii = 0;
+    // while (ii < listoni.length) {
+    // System.out.println(listoni[ii]);
+    // ii++;
+    // }
+
+    // System.out.println("---- For ----");
+
+    // // For (definizione contatore; condizione di loop; incremento)
+    // for (int iii = 0; iii < listoni.length; iii++) {
+    // System.out.println(listoni[iii]);
+    // }
+
+    // for (int iii = listoni.length - 1; iii > 0; iii--) {
+    // System.out.println(listoni[iii]);
+    // }
+
+    // System.out.println("---- For-Each ----");
+
+    for (int item : listoni) {
+      System.out.println(item);
+    }
 
   }
 
-  public static void printAll(int[] listoni) {          /*questa è definita come la signature del metodo*/
-    
-    int count = 0;
+  // public static int[] fillRange(int min, int max) {
+  // int[] list;
 
-    while(count != listoni.length) {
-      System.out.println(listoni[0]);
-      System.out.println(listoni[1]);
-      System.out.println(listoni[2]);
-      System.out.println(listoni[3]);
-      System.out.println(listoni[4]);
-      count++;
-    }    
-    
-    
-    return ;
-  }
+  // return list;
+  // }
+
+  // public static int[] reverse(int[] list) {
+  // int[] invertedList;
+
+  // return invertedList;
+  // }
 
   public static int getMax(int[] list) {
-
     return 0;
   }
 
-  public static int getMin(int[] list) {
+  // public static int getMin(int[] list) {
 
-    return 0;
-  }
+  // }
 
 }
