@@ -54,6 +54,31 @@ class Cane {
         name = name;                  
     }
 ```
+
+
+Es 1 zanca:
+// TODO costructor that accepts name and age with alive defaulting to true
+
+    /*public String isAlive(String name, Integer age, Boolean alive) {
+        this.name = name;
+        this.age = age;
+        alive = true;
+
+        if (alive = true)  {
+
+            System.out.println("My name is "+name);                         
+            System.out.println("i'm "+age);
+            System.out.println("and i'm alive");
+        }
+        else {
+            System.out.println("My name is "+name);
+            System.out.println("and i'm dead");
+        }
+        
+        return name;
+    }*/
+
+    
 ![](../assets/objects1.png)
 
 [Back to index page](readme.md)
