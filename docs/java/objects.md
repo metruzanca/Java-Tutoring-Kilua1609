@@ -70,31 +70,135 @@ class Cane {        /*Per creare una classe basta mettere il tipo class davnati 
 ```
 La classe in java è divisa principalmente in due parti:
 CAMPI: Sono variabili particolari che vengono inizializzate e usate ,spesso, solo all'interno della classe stessa.
-   // Constructor
-    public Cane(String name){
-        name = name;  
-Es 1 zanca:
-// TODO costructor that accepts name and age with alive defaulting to true
+Metodi: sono le funzioni della classe, esse possono anche essere richiamate all'esterno della classe
+--------------------------CONSTRUCTOR IN JAVA-----------------------------
+sempre nell'argomento delle classi java abbiamo il constructor che è un metodo speciale usato per inizializzare gli oggetti.
+Esempi:
+```java
+    class Cane{
+        // Constructor
+    public Cane(String name){           /*Qui inizializziamo l'oggetto*/
+        name = name;                    /*e qui gli diamo un valore*/
+        }        
+    }
+   ```
+   Quando andiamo a inizializzare un oggetto con un constructor dobbiamo anche indicarne il tipo e sopratutto a quale classe appartiene
 
-    /*public String isAlive(String name, Integer age, Boolean alive) {
+   -----------------------------FUNZIONI JAVA-----------------------------
+   IF:
+   la funzione if è una delle funzioni più semplici e utili in java, ci permette di mettere una condizione per il funzionamento di funzioni a nostra scelta
+   Esempio if:
+   ```java
+   if (x > z) {         /*tra le tonde poniamo la condizione di if*/
+       System.out.println("X is greater than Z");   /*tra le graffe poniamo cosa deve succedere se la condizione è verificata*/
+   }
+   ```
+   Esiste anche un altra funzione molto semplice e itile che va sempre in coppia con if, essa è la funzione else
+   la funzione else ci permette di mettere un comportamento aggiuntivo alla nostra funzione if in caso la condizione non sia vera
+   Esempio else:
+   ```java
+    if (x > z) {         
+       System.out.println("X is greater than Z");   
+   }
+   else {
+       x++;
+   }
+   ```
+   come si può vedere aggiungiamo un nuovo comportamento in caso la condizione non viene rispettata, il modo più utile per usare ciò è in un ciclo dove poniamo il tutto in un ciclo che continua fino a quando la condizione di if non diventa vera
+
+Es 1:
+Consegna:
+```java
+class Gatto {
+    String name;
+    Integer age;
+    Boolean alive;
+
+    public Gatto(String name, Integer age, Boolean alive) {
         this.name = name;
         this.age = age;
-        alive = true;
+        this.alive = alive;
+    }
 
-        if (alive = true)  {
+    // TODO costructor that accepts name and age with alive defaulting to true
 
-            System.out.println("My name is "+name);                         
-            System.out.println("i'm "+age);
-            System.out.println("and i'm alive");
+    public String isAlive() {
+        // TODO if dead say "I'm dead"
+        // TODO if alive say "Im name, im age old"
+        return "todo";
+    }
+}
+```
+Esercizio vero e proprio:
+```java
+class Gatto {               /*per prima cosa inizializiamo le variabili*/
+    String name;            /*della nostra classe*/
+    Integer age;
+    Boolean alive;
+
+    public Gatto(String name, Integer age, Boolean alive) {
+        this.name = name;
+        this.age = age;         /*poi inizializiamo gli oggetti relativi*/
+        this.alive = alive;     /*a tali variabili*/
+    }
+
+    public Gatto(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+        this.alive = true;
+    }
+
+    public String isAlive() {
+        if (alive) {                                            
+            return "I'm name " + name + ". im " + age + " old";
+        } else {
+            return "I'm dead";
         }
-        else {
-            System.out.println("My name is "+name);
-            System.out.println("and i'm dead");
-        }
-        
-        return name;
-    }*/
+        /*e in quest ultima parte vi è la funzione vera e propria della nostra classe*/
+    }
+}
+```
+----------------------------CICLI JAVA------------------------------------
+Come abbiamo accennato nella funzione if in java esistono delle funzioni apposite per creare cicli; cos'è un ciclo? un ciclo è uno stato del programma java causato da particolari funzioni: While, Do....While,For.
+Queste tre hanno un funzionamento simile , ma una struttura diversa, tutti e tre creano dei cicli,ma ognuno dei tre ha un modo diverso dagli altri due per creare suddetto ciclo.
 
+While:
+Il While è il più semplice delle tre funzioni a ciclo, come dice la parola stessa esso viene impostato per avere una condizione partente come vera che finchè non diventerà falsa continuerà il ciclo.
+Esempio:
+```java
+int numero = 0;
+while (numero < 0) {
+    System.out.println("il loop continua");
+    numero++;
+}
+``` 
+Come possiamo vedere la condizione del ciclo viene controllata subito prima di inziare il ciclo e continua fino a quando la condizione tra le parentesi non viene resa falsa
+
+Do....While: 
+Il do...while è una funzione molto simile al while però con una differenza cioè che la condiazione viene controllata ogni fine ciclo
+Esempio:
+```java
+int numero = 0;
+do{
+    System.out.println("Il ciclo è qua ancora");
+    numero++;
+} while(numero < 5);
+```
+For:
+Il for è il più "complesso" dei tre tipi di ciclo che queste funzioni offrono, ma non tanto per come funziona dato che ha lo stesso esatto funzionamento del while con una struttura diversa.
+```java
+for (inizializazione,Condizione di terminazione, incremento/decremento) {
+    //statement di java
+}
+```
+come possiamo vedere java è diviso in tre parti principali,escludendo lo statement, e ognuna di queste funziona allo stesso modo degli altri cicli; abbiamo un valore iniziale (spesso di una variabile), una condizione di esistenza del ciclo che continuerà a farlo andare fino a quando non diventa falsa e un incremento di suddetta variabile per rendere prima o poi la condizione falsa.
+Esempio for:
+```java
+for (int numero = 0, numero < 5, numero++) {
+    System.out.println("il ciclo continua e siamo a "+numero);
+}
+```
+La cosa interessante del for è che ci permette di usare la variabile di inzializzazione direttamente nello statement senza troppi problemi.
     
 ![](../assets/objects1.png)
 
