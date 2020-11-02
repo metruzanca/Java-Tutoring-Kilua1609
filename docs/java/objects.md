@@ -1,4 +1,4 @@
-#JAVA PER IDIOTI
+# JAVA PER IDIOTI
 
 Per prima cosa im java per iniziare il programma dobbiamo dichiarare le classi del programma
 Esempio:
