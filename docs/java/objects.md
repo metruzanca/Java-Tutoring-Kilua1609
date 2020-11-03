@@ -17,12 +17,15 @@ public static void main(String[] args) {                            //questo met
 
 }              
 ```
-"pubblic": serve per indicare che questo metodo è visibile da tutti senza       esclusioni
+"pubblic": serve per indicare che questo metodo è visibile da tutti senza       esclusioni.
+
 "static": serve a indicare che le funzioni all'interno di questo metodo
-        sono appartenenti solo alla classe del metodo e non possono essere usate altrove
-"void": il tipo di dato che il nostro metodo da in ritorno e può essere utilizzato solo per ritorni
-una cosa come ad esempio: "void v;" non è possibile da fare
-"main": serve a indicare il nome del metodo che ci permetterà quindi di chiamare le funzioni al suo interno (può avere nomi diversi da main però avere un metodo chiamato main è obbligatorio)
+        sono appartenenti solo alla classe del metodo e non possono essere usate altrove.
+
+"void": il tipo di dato che il nostro metodo da in ritorno e può essere utilizzato solo per ritorni.
+
+Una cosa come ad esempio: "void v;" non è possibile da fare
+"main": serve a indicare il nome del metodo che ci permetterà quindi di chiamare le funzioni al suo interno (può avere nomi diversi da main però avere un metodo chiamato main è obbligatorio).
 
 
 ```java
@@ -61,7 +64,8 @@ public static Integer add(int a, int b) {       /*Come possiamo vedere abbiamo d
     }
 
 ```
----------------------------------CLASSI IN JAVA---------------------------
+--------------------------------------------------------------CLASSI IN JAVA----------------------------------------------------
+
 La classe in java è uno dei costrutti più importanti e fondamentali dell'intero programma, essa ci permette di definire le variabili che useremo e di anche definire funzioni, entrambe le cose potranna essere chiamate in qualsiasi punto del programma
 Esempio della creazione di una classe:
 ```java
@@ -71,8 +75,10 @@ class Cane {        /*Per creare una classe basta mettere il tipo class davnati 
 La classe in java è divisa principalmente in due parti:
 CAMPI: Sono variabili particolari che vengono inizializzate e usate ,spesso, solo all'interno della classe stessa.
 Metodi: sono le funzioni della classe, esse possono anche essere richiamate all'esterno della classe
---------------------------CONSTRUCTOR IN JAVA-----------------------------
-sempre nell'argomento delle classi java abbiamo il constructor che è un metodo speciale usato per inizializzare gli oggetti.
+
+-----------------------------------------------------CONSTRUCTOR IN JAVA----------------------------------------------------
+
+Sempre nell'argomento delle classi java abbiamo il constructor che è un metodo speciale usato per inizializzare gli oggetti.
 Esempi:
 ```java
     class Cane{
@@ -84,7 +90,9 @@ Esempi:
    ```
    Quando andiamo a inizializzare un oggetto con un constructor dobbiamo anche indicarne il tipo e sopratutto a quale classe appartiene
 
-   -----------------------------FUNZIONI JAVA-----------------------------
+
+   -----------------------------------------------------------FUNZIONI JAVA-------------------------------------------------------
+   
    IF:
    la funzione if è una delle funzioni più semplici e utili in java, ci permette di mettere una condizione per il funzionamento di funzioni a nostra scelta
    Esempio if:
@@ -158,7 +166,8 @@ class Gatto {               /*per prima cosa inizializiamo le variabili*/
     }
 }
 ```
-----------------------------CICLI JAVA------------------------------------
+--------------------------------------------------------CICLI JAVA----------------------------------------------------------------
+
 Come abbiamo accennato nella funzione if in java esistono delle funzioni apposite per creare cicli; cos'è un ciclo? un ciclo è uno stato del programma java causato da particolari funzioni: While, Do....While,For.
 Queste tre hanno un funzionamento simile , ma una struttura diversa, tutti e tre creano dei cicli,ma ognuno dei tre ha un modo diverso dagli altri due per creare suddetto ciclo.
 
@@ -199,8 +208,11 @@ for (int numero = 0, numero < 5, numero++) {
 }
 ```
 La cosa interessante del for è che ci permette di usare la variabile di inzializzazione direttamente nello statement senza troppi problemi.
+
+Esiste una variazione particolare del for chiamata "for each". Il for each è particolarmente utilizzato  per gli array, esso non ha una condizione di funzionamento per il ciclo ma bensì esegue il ciclo per ogni singolo elemento dell'array che quest ultimo sia nullo o meno.
+
     
-![](../assets/objects1.png)
+
 
 [Back to index page](readme.md)
 

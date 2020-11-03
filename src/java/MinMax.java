@@ -6,16 +6,16 @@ public class MinMax {
   }
 
   public static int getMax(int[] arrayNumeri) {
-    int i = 0;
-  if(arrayNumeri[0] > arrayNumeri[i]) {
-
-    }
-  
-    }
+    
   }
+
+    
+  
+    
+  
 
     return 0;
-  }
+  
 
   public static int compareNum(int a , int b) {
     if(a < b) {
