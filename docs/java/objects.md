@@ -309,9 +309,10 @@ public class MinMax {   /*La classe MinMax è dove il 90% del programma è conte
   public static Integer[] reverse(Integer[] arrayNumeri) {
     Integer[] newArray = new Integer[arrayNumeri.length]; /*Creiamo un nuovo array integer*/
     for (int i = 0; i < Math.floor(newArray.length / 2); i++) { /*Poniamo il ciclo in for con la una particolare condizione però; dato  che dobbiamo invertire di posizione a due a due gli elementi dell'array non possiamo arrivare fino in fondo all'array, perchè invertirebbe una seconda volta gli elementi degli array portandoli alle posizioni orginali nullificando il nostro lavoro, quindi diciamko alla condizione di fermare il ciclo prima del elemento nella posizione equivalente alla metà della lunghezza dell'array.*/
-    Integer k = newArray[i];
       newArray[i] = arrayNumeri[arrayNumeri.length - 1 - i]; /*Queste due funzioni sono*/
-      newArray[newArray.length - 1 - i] = k; /* il fulcro del nostro metodo, è grazie a loro se l'inversione avviene*/
+      newArray[newArray.length - 1 - i] = newArray[i]; /* il fulcro del nostro metodo, è grazie a loro se l'inversione avviene*/
+
+      /*per salvare lo stato del valore del termine in posizione i del nostro array creiamo un nuovo array dove copiamo tutti i valori originali. Useremo quindi la copia dei valori del nostro array invece degli originali lasciandoli quindi intatti.*/
     }
     return newArray;
   }
