@@ -29,8 +29,10 @@ Una cosa come ad esempio: "void v;" non è possibile da fare
 
 
 ```java
-public static void log(String str) {     /*come si può vedere il metodo può avere diversi nomi*/        
-  System.out.println(str);              /*Questa è la funzione più basica di java,una funziuone di stampa a schermo*/
+//come si può vedere il metodo può avere diversi nomi
+public static void log(String str) {
+  //Questa è la funzione più basica di java,una funziuone di stampa a schermo          
+  System.out.println(str);              
 }
 ```
 
@@ -61,7 +63,10 @@ I java type infine sono le tipologie di esclusivamente oggetto che sono esclusiv
 i wrapper e i primitivi sono compatibili tra di loro
 Esempio:
 ```java
-public static Integer add(int a, int b) {       /*Come possiamo vedere abbiamo definiti il tipo del metodo come un wrapper ma abbiamo usato il rispettivo primitivo all'interno del metodo e ciò va bene per via della loro compatibilità*/
+//Come possiamo vedere abbiamo definito il tipo del metodo come un wrapper ma
+//abbiamo usato il rispettivo primitivo all'interno del metodo e ciò va bene per
+//via della loro compatibilità
+public static Integer add(int a, int b) {       
         return a + b;
     }
 ```
@@ -74,13 +79,67 @@ CLASSI IN JAVA
 La classe in java è uno dei costrutti più importanti e fondamentali dell'intero programma, essa ci permette di definire le variabili che useremo e di anche definire funzioni, entrambe le cose potranna essere chiamate in qualsiasi punto del programma
 Esempio della creazione di una classe:
 ```java
-class Cane {        /*Per creare una classe basta mettere il tipo class davnati a un nome e poi aggiungere le parentesi graffe per indicare il punto dove la classe esiste*/                      
+//Per creare una classe basta mettere il tipo class davnati a un nome e poi aggiungere
+//le parentesi graffe per indicare il punto dove la classe esiste
+class Cane {                              
     }
 ```
-La classe in java è divisa principalmente in due parti:
+Essa è divisa principalmente in due parti:
 CAMPI: Sono variabili particolari che vengono inizializzate e usate ,spesso, solo all'interno della classe stessa.
-Metodi: sono le funzioni della classe, esse possono anche essere richiamate all'esterno della classe
+Metodi: sono le funzioni della classe, esse possono anche essere richiamate all'esterno della classe.
 
+I Metodi di una Classe possono, attraverso l'uso di parole chiave, essere resi
+visibili a tutti o resi visibili solo ad alcuni utenti.
+Ciò ovviamente è un estremamente importante come funzionalità di un metodo perchè
+così possiamo dare dei livelli di sicurezza al nostro codice.
+
+Pubblic: è lo stato di base di un metodo e sta a significare che il metodo può essere visto da tutti senza determinati prerequisiti.
+Esempio Public e Private:
+
+Private: indica che il metodo è visibile soltanto all'interno della classe stessa
+e non può essere visto da nessun altro al di fuori di quest ultima.
+
+Esempio Public e Private:
+
+```java
+class MyMath {
+  public Integer Add1(Integer n) {
+    return Add(n, 1);
+  }
+
+  public Integer Add2(Integer n) {
+    return Add(n, 2);
+  }
+
+  private Integer Add(Integer a, Integer b) {
+    return a + b;
+  }
+}
+```
+
+This:
+Per poter gestire più semplicemente le variabili nelle classi si usa
+la parola chiave this.
+Questa parola chiave è così importante perchè in java ogni volta che inseriamo
+il nome di una variabile è come se ne inzializzassimo una nuova variabile, quindi
+per poterci riferire a una variabile già precedentemente inizializzata usiamo this.
+
+Esempio this.:
+```java
+class Person {
+  String name;
+  Integer age;
+
+  public Person(String name, Integer age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  public boolean areEqual(Person obj) {
+    return this.name == obj.name;
+  }
+}
+```
 <center>
 CONSTRUCTORS
 </center>
@@ -90,8 +149,10 @@ Esempi:
 ```java
     class Cane{
         // Constructor
-    public Cane(String name){           /*Qui inizializziamo l'oggetto*/
-        name = name;                    /*e qui gli diamo un valore*/
+        //Qui inizializziamo l'oggetto
+    public Cane(String name){
+      //e qui gli diamo un valore           
+        name = name;                    
         }        
     }
    ```
@@ -112,8 +173,10 @@ FLOW CONTROL STAEMENTS
    la funzione if è una delle funzioni più semplici e utili in java, ci permette di mettere una condizione per il funzionamento di funzioni a nostra scelta
    Esempio if:
    ```java
-   if (x > z) {         /*tra le tonde poniamo la condizione di if*/
-       System.out.println("X is greater than Z");   /*tra le graffe poniamo cosa deve succedere se la condizione è verificata*/
+   //tra le tonde poniamo la condizione di if
+   if (x > z) {
+  //tra le graffe poniamo cosa deve succedere se la condizione è verificata        
+       System.out.println("X is greater than Z");   
    }
    ```
    Esiste anche un altra funzione molto semplice e itile che va sempre in coppia con if, essa è la funzione else
@@ -154,15 +217,18 @@ class Gatto {
 ```
 Esercizio vero e proprio:
 ```java
-class Gatto {               /*per prima cosa inizializiamo le variabili*/
-    String name;            /*della nostra classe*/
+//per prima cosa inizializiamo le variabili della nostra classe
+class Gatto {               
+    String name;      
     Integer age;
     Boolean alive;
 
     public Gatto(String name, Integer age, Boolean alive) {
         this.name = name;
-        this.age = age;         /*poi inizializiamo gli oggetti relativi*/
-        this.alive = alive;     /*a tali variabili*/
+      //poi inizializiamo gli oggetti relativi
+        this.age = age;
+      //a tali variabili        
+        this.alive = alive;     
     }
 
     public Gatto(String name, Integer age) {
@@ -170,14 +236,14 @@ class Gatto {               /*per prima cosa inizializiamo le variabili*/
         this.age = age;
         this.alive = true;
     }
-
+  //e in quest ultima parte vi è la funzione vera e propria della nostra classe
     public String isAlive() {
         if (alive) {                                            
             return "I'm name " + name + ". im " + age + " old";
         } else {
             return "I'm dead";
         }
-        /*e in quest ultima parte vi è la funzione vera e propria della nostra classe*/
+        
     }
 }
 ```
@@ -198,10 +264,14 @@ while (numero < 0) {
     numero++;
 }
 ``` 
-Come possiamo vedere la condizione del ciclo viene controllata subito prima di inziare il ciclo e continua fino a quando la condizione tra le parentesi non viene resa falsa
+Come possiamo vedere la condizione del ciclo viene controllata subito prima di
+inziare il ciclo e continua fino a quando la condizione tra le parentesi non
+viene resa falsa
 
 CICLO Do....While: 
-Il do...while è una funzione molto simile al while però con una differenza fondamentale, la condizione viene controllata ogni fine ciclo invece che all'inizio di ogni ciclo.
+Il do...while è una funzione molto simile al while però con una differenza 
+fondamentale, la condizione viene controllata ogni fine ciclo invece che all'inizio
+di ogni ciclo.
 
 Esempio:
 ```java
@@ -212,32 +282,47 @@ do{
 } while(numero < 5);
 ```
 CICLO For:
-Il for è il più "complesso" dei tre tipi di ciclo che queste funzioni offrono, ma non tanto per come funziona dato che ha lo stesso esatto funzionamento del while con una struttura diversa.
+Il for è il più "complesso" dei tre tipi di ciclo che queste funzioni offrono,
+ma non tanto per come funziona dato che ha lo stesso esatto funzionamento del
+while con una struttura diversa.
 ```java
 for (inizializazione,Condizione di terminazione, incremento/decremento) {
     //statement di java
 }
 ```
-come possiamo vedere java è diviso in tre parti principali,escludendo lo statement, e ognuna di queste funziona allo stesso modo degli altri cicli; abbiamo un valore iniziale (spesso di una variabile), una condizione di esistenza del ciclo che continuerà a farlo andare fino a quando non diventa falsa e un incremento di suddetta variabile per rendere prima o poi la condizione falsa.
+Come possiamo vedere java è diviso in tre parti principali,escludendo lo statement,
+e ognuna di queste funziona allo stesso modo degli altri cicli; abbiamo un valore
+iniziale (spesso di una variabile), una condizione di esistenza del ciclo che
+continuerà a farlo andare fino a quando non diventa falsa e un incremento di
+suddetta variabile per rendere prima o poi la condizione falsa.
 Esempio for:
 ```java
 for (int numero = 0, numero < 5, numero++) {
     System.out.println("il ciclo continua e siamo a "+numero);
 }
 ```
-La cosa interessante del for è che ci permette di usare la variabile di inzializzazione direttamente nello statement senza troppi problemi.
+La cosa interessante del for è che ci permette di usare la variabile di inzializzazione
+direttamente nello statement senza troppi problemi.
 
-CICLO For "each":Esiste una variazione particolare del for chiamata "for each". Il for each è particolarmente utilizzato  per gli array, esso non ha una condizione di funzionamento per il ciclo ma bensì esegue il ciclo per ogni singolo elemento dell'array che quest ultimo sia nullo o meno.
+CICLO For "each":Esiste una variazione particolare del for chiamata "for each".
+Il for each è particolarmente utilizzato  per gli array, esso non ha una condizione
+di funzionamento per il ciclo ma bensì esegue il ciclo per ogni singolo elemento
+dell'array che quest ultimo sia nullo o meno.
 
-Gli esempi più evidenti di un corretto uso dei cicli e dell'if è la creazione di un programma che trova l'elemento più grande in un array e un programma che inverte la posizione di elementi opposti di un array (1234 => 4321).
+Gli esempi più evidenti di un corretto uso dei cicli e dell'if è la creazione
+di un programma che trova l'elemento più grande in un array e un programma che
+inverte la posizione di elementi opposti di un array (1234 => 4321).
 
 
 ```java
 import java.util.Random;
 
-public class MinMax {   /*La classe MinMax è dove il 90% del programma è contenuto*/
-  public static void main(String[] args) {  /*Il primo metodo fornisce i Println che*/
-    Integer[] numbersInOrder = fillArray(4);  /*stamperanno i risultati del programma*/    
+//La classe MinMax è dove il 90% del programma è contenuto
+public class MinMax {
+//Il primo metodo fornisce i Println che stamperanno i risultati del programma 
+  public static void main(String[] args) {
+ 
+    Integer[] numbersInOrder = fillArray(4);      
     System.out.println("In         order:" + formatArrayString(numbersInOrder));
     
 
@@ -246,35 +331,46 @@ public class MinMax {   /*La classe MinMax è dove il 90% del programma è conte
     System.out.println("In         order:" + formatArrayString(numbersInOrder));
     System.out.println("In reverse order:" + formatArrayString(numbersInReverse));
   }
-
-  public static String formatArrayString(Integer[] arr) { /*Il seconod metodo crea gli*/
-    String s = "";  /*array che useremo per il resto dei metodi*/
+//Il seconod metodo crea gli array che useremo per il resto dei metodi
+  public static String formatArrayString(Integer[] arr) { 
+    String s = "";  
     for (Integer i : arr) {
       s += i.toString() + " ";
     }
     return s;
   }
 
-  public static Integer getRandomNumberUsingNextInt(int min, int max) { /*Il terzo metodo*/
-    Random random = new Random();   /*crea i numeri con cui riempiremo i nostri array *1 */
+//Il terzo metodo crea i numeri con cui riempiremo i nostri array *1
+  public static Integer getRandomNumberUsingNextInt(int min, int max) { 
+    Random random = new Random();
     return random.nextInt(max - min) + min;
   }
 
-  public static Integer[] fillArray(int cap) { /*rienpe gli arrei creati*/ 
+//rienpe gli arrei creati
+  public static Integer[] fillArray(int cap) { 
     Integer[] arr = new Integer[cap];
     for (int i = 0; i < cap; i++) {
       arr[i] = getRandomNumberUsingNextInt(0, 9);
     }
     return arr;
   }
-/*prima proposta per un metodo efficace per trovare l'elemento maggiore nell'array*/
-  public static Integer getMax(Integer[] arrayNumeri) { 
-    for (int i : arrayNumeri) {     /*Il fattore che principalmente ci impedisce di poter fare facilmente questo esercizio è il fatto che non possiamo salvare lo status della nostra variabile i così facilmente.*/
-      boolean isCurrent = true;     /*Questo boolean è la soluzione al nostro problema di status della variabile i*/
-      for (int ii : arrayNumeri) {      /*il for each e i due if prendono il valore dell'array in posizione i e o lo confronta a tutti gli altri e se non è il più grande continua il ciclo aumentando i di i e avanzando quindi alla posizione successiva nell'array*/
-        if (i == ii) /*l'if qui ci permette di dire al ciclo di continuare e ingorare questa condizione*/
+//prima proposta per un metodo efficace per trovare l'elemento maggiore nell'array
+  public static Integer getMax(Integer[] arrayNumeri) {
+//Ciò che principalmente ci impedisce di poter trovare il valore maggiore
+//è che non possiamo salvare lo status della nostra variabile i così facilmente. 
+    for (int i : arrayNumeri) {
+//Questo boolean è la soluzione al nostro problema di status della variabile i     
+      boolean isCurrent = true;
+//il for each e i due if prendono il valore dell'array in posizione i
+//e o lo confronta a tutti gli altri e se non è il più grande continua
+//il ciclo aumentando i di i e avanzando quindi alla posizione successiva nell'array     
+      for (int ii : arrayNumeri) {
+      //l'if qui ci permette di dire al ciclo di continuare e ingorare questa condizione     
+        if (i == ii) 
           continue;
-        if (ii > i) { /*E questo è l'if che ci permette di confrontare il termine in posizione i con il resto nell'array*/
+//Questo è l'if che ci permette di confrontare il termine in posizione
+//i con il resto nell'array
+        if (ii > i) { 
           isCurrent = false;
         }
       }
@@ -284,20 +380,30 @@ public class MinMax {   /*La classe MinMax è dove il 90% del programma è conte
     }
     return -1;
   }
-  /*La prima proposta per questo metodo è poco efficente e molto lenta per via del fatto che per ogni singolo valore dell'array dobbiamo analizare tutti gli altri ogni volta e quindi ciò rallenta tremendamente il processo*/
-/*Seconda proposta per il metodo*/
+//La prima proposta per questo metodo è poco efficente e molto lenta per via
+//del fatto che per ogni singolo valore dell'array dobbiamo analizare tutti
+//gli altri ogni volta e quindi ciò rallenta tremendamente il processo
+//Seconda proposta per il metodo
   public static Integer getMaxV2(Integer[] arrayNumeri) {
     Integer state = null;   /*status della variabile*/
     for (int i = 0; i < arrayNumeri.length - 1; i++) {
       state = arrayNumeri[i] > arrayNumeri[i + 1] ? arrayNumeri[i] : arrayNumeri[i + 1];
-      /*L'uso di un ternario ci permette facilmente di salvare lo stato della nostra variabile in "state"*/
-      /*Nel ternario abbiamo che se il valore in posizione i è > di quello in posizione i + 1 allora deve salvare in state il valore in i e se i < i + 1 allora deve salvare il valore in i + 1 e poi continuare ai valori successivi*/
+//L'uso di un ternario ci permette facilmente di salvare lo stato
+//della nostra variabile in "state"
+//Nel ternario abbiamo che se il valore in posizione i è > di quello in posizione
+//i + 1 allora deve salvare in state il valore in i e se i < i + 1 allora deve
+//salvare il valore in i + 1 e poi continuare ai valori successivi
     }
     return state;
   }
-/*La secondo proposta per il metodo getMax è moooolto più efficente della prima dato che il confronto per trovare il maggiore di tutti i valore non viene fatto tra tutti i valori nell'array ogni volta ,ma bensì tra due alla volta escludendo poi uno dei due per passare al successivo per il confronto rendendo la quantità di cicli estremamente più bassa e anche la quantità di linee da eseguire è drasticamente diminuita.*/
+//La secondo proposta per il metodo getMax è moooolto più efficente della prima
+//dato che il confronto per trovare il maggiore di tutti i valore non viene fatto
+//tra tutti i valori nell'array ogni volta ,ma bensì tra due alla volta escludendo
+//poi uno dei due per passare al successivo per il confronto rendendo la quantità
+//di cicli estremamente più bassa e anche la quantità di linee da eseguire
+//è drasticamente diminuita.
 
-/*il metodo per get min è uguale a quello di get max cambia solo la condizione*/
+//il metodo per get min è uguale a quello di get max cambia solo la condizione
   public static Integer getMin(Integer[] arrayNumeri) {
     Integer status = null; 
     for (int i = 0; i < arrayNumeri.length - 1; i++) {
@@ -305,14 +411,25 @@ public class MinMax {   /*La classe MinMax è dove il 90% del programma è conte
     }
     return status;
   }
-/*Metodo inversione elementi array*/
+//Metodo inversione elementi array
   public static Integer[] reverse(Integer[] arrayNumeri) {
-    Integer[] newArray = new Integer[arrayNumeri.length]; /*Creiamo un nuovo array integer*/
-    for (int i = 0; i < Math.floor(newArray.length / 2); i++) { /*Poniamo il ciclo in for con la una particolare condizione però; dato  che dobbiamo invertire di posizione a due a due gli elementi dell'array non possiamo arrivare fino in fondo all'array, perchè invertirebbe una seconda volta gli elementi degli array portandoli alle posizioni orginali nullificando il nostro lavoro, quindi diciamko alla condizione di fermare il ciclo prima del elemento nella posizione equivalente alla metà della lunghezza dell'array.*/
-      newArray[i] = arrayNumeri[arrayNumeri.length - 1 - i]; /*Queste due funzioni sono*/
-      newArray[newArray.length - 1 - i] = newArray[i]; /* il fulcro del nostro metodo, è grazie a loro se l'inversione avviene*/
+//Creiamo un nuovo array integer
+    Integer[] newArray = new Integer[arrayNumeri.length];
+//Poniamo il ciclo in for con la una particolare condizione però; dato
+//che dobbiamo invertire di posizione a due a due gli elementi dell'array
+//non possiamo arrivare fino in fondo all'array, perchè invertirebbe una seconda
+//volta gli elementi degli array portandoli alle posizioni orginali nullificando
+//il nostro lavoro, quindi diciamko alla condizione di fermare il ciclo prima
+//del elemento nella posizione equivalente alla metà della lunghezza dell'array. 
+    for (int i = 0; i < Math.floor(newArray.length / 2); i++) {
+      //Queste due funzioni sono il fulcro del nostro metodo, è grazie a loro se l'inversione avviene  
+      newArray[i] = arrayNumeri[arrayNumeri.length - 1 - i];
+      newArray[newArray.length - 1 - i] = newArray[i]; 
 
-      /*per salvare lo stato del valore del termine in posizione i del nostro array creiamo un nuovo array dove copiamo tutti i valori originali. Useremo quindi la copia dei valori del nostro array invece degli originali lasciandoli quindi intatti.*/
+//per salvare lo stato del valore del termine in posizione i del nostro array
+//creiamo un nuovo array dove copiamo tutti i valori originali. Useremo quindi
+//la copia dei valori del nostro array invece degli originali lasciandoli
+//quindi intatti.
     }
     return newArray;
   }
