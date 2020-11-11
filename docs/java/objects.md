@@ -124,6 +124,9 @@ Questa parola chiave è così importante perchè in java ogni volta che inseriam
 il nome di una variabile è come se ne inzializzassimo una nuova variabile, quindi
 per poterci riferire a una variabile già precedentemente inizializzata usiamo this.
 
+In una classe una variabile può essere dichiarata e assegnata,ma nel metodo una
+variabile puoò essere solo assegnata e inizializzata.
+
 Esempio this.:
 ```java
 class Person {
