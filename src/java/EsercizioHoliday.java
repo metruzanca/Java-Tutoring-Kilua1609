@@ -1,3 +1,6 @@
+//http://comet.lehman.cuny.edu/owen/teaching/2014sp/cmp326/classesAndObjectsPractice.pdf
+import java.util.Date;
+
 public class EsercizioHoliday {
     public static void main(String[] args) {
         Holiday h1 = new Holiday("name", 1, "month");
@@ -11,7 +14,7 @@ public class EsercizioHoliday {
             new Holiday("name", 20, "month"),
         };
 
-        double d = h1.avgDate(harr);
+        double d = Holiday.avgDate(harr);
         System.out.println(d);
 
         double d1 = 0.2;
@@ -44,6 +47,3 @@ class Holiday {
     }
     
 }
-
-
-    
