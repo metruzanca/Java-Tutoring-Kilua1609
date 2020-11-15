@@ -1,8 +1,11 @@
 //http://comet.lehman.cuny.edu/owen/teaching/2014sp/cmp326/classesAndObjectsPractice.pdf
 ```java
-enum Rating {       //serve per dare alle funzioni opzioni aggiuntive per
-    PG,             //l'identificazione, in caso il rating abbia un nome
-    PG13,           //diverso da "PG"
+//serve per dare alle funzioni opzioni aggiuntive per
+//l'identificazione, in caso il rating abbia un nome
+//diverso da "PG"
+enum Rating {       
+    PG,            
+    PG13,           
     R
 }
 
