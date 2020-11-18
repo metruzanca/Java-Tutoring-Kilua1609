@@ -113,4 +113,21 @@ Elemento posizione: 5+2, index: 4+2, element: 89
   }
   remove();
   }
+
+  public void reverse(){
+    int[] copy = num.clone();
+    for(int i = 0; i < (length / 2); i++) {
+      num[i] = copy[length - 1 - i ];
+      num[length - 1 - i] = copy[i];
+    }
+  }
+
+  public Integer find(int element){
+    for (int i = 0; i < num.length; i++) {
+      if(num[i] == element) {
+        return i;
+      }
+    }
+    return null;
+  }
 }
