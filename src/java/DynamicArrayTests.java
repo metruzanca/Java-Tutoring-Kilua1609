@@ -12,8 +12,16 @@ public class DynamicArrayTests {
     stampaArray(num);
     num.addAt(100, 3);
     stampaArray(num);
-    num.removeAt(0);
+    num.removeAt(3);
     stampaArray(num);
+    num.reverse();
+    stampaArray(num);
+    num.find(15);
+
+    Integer found = num.find(15);
+    if(found != null){
+      System.out.println("Element è in posizione " + found);
+    }
   }
 
   public static void stampaArray(DynamicArray array) {
