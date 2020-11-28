@@ -7,7 +7,7 @@
   * Campi:
     - `int nTotSeats` (Numero dei posti totali del treno)
     - `int nFirstClassSeats` (Numero dei posti in prima classe)
-    - `int nSecondClassSeats` (Numero dei posti in seconda classe)
+    - `int nSecondClassSeats` (Numero ,dei posti in seconda classe)
     - `int nFirstClassReservedSeats` (Numero dei posti in prima classe già prenotati)
     - `int nSecondClassReservedSeats` (NUmero dei posti in seconda classe già prenotati)
   * Metodi:

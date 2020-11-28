@@ -43,7 +43,7 @@ class Animal {
 }
 
 class Doggo extends Animal{
-  public String name;
+  private String name;
 
   public Doggo(String name, int age, int legs){
     super("Doggo", age, 4);
