@@ -5,8 +5,8 @@ class TestStudent {
        * aggiornare l'invocazione del metodo build con l'aggiunta dei
        * parametri
        */
-      student.build();
-      student.printStudentInfo();
+      //student.build();
+      //student.printStudentInfo();
       /*
        * Creare dei nuovi oggetti relativi agli studenti:
        *

@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - TestComplexNum",
+      "request": "launch",
+      "mainClass": "TestComplexNum",
+      "projectName": "lab01"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - TestCalculator",
+      "request": "launch",
+      "mainClass": "TestCalculator",
+      "projectName": "lab01"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - UseTrain",
+      "request": "launch",
+      "mainClass": "UseTrain",
+      "projectName": "lab01"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - TestScopesMain",
+      "request": "launch",
+      "mainClass": "TestScopesMain",
+      "projectName": "lab01"
+    },
+    {
+      "type": "java",
       "name": "Debug (Launch) - Current File",
       "request": "launch",
       "mainClass": "${file}"

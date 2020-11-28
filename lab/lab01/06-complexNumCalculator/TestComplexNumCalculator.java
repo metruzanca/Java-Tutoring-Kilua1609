@@ -18,3 +18,49 @@ class TestComplexNumCalculator {
          */
     }
 }
+
+class CompleNumeCalculator {
+    int operationsCompleted;
+    Double lastResultReale;
+    Double lastResultImmginario;
+    Double reale1;
+    Double immaginario1;
+    Double real2;
+    Double immaginario2;
+
+    public void CalculatorVariables () {
+        operationsCompleted = 0;
+        lastResultReale = 0.0;
+        lastResultImmginario = 0.0;
+    }
+
+    public void ComplexNumber(Double reale1, Double reale2 Double immaginario1, Double immaginario2) {
+        this.reale1 = reale1;
+        this.immaginario1 = immaginario1;
+        this.real2 = reale2;
+        this.immaginario2 = immaginario2;
+    }
+
+    public Double complexAdd (Double reale1, Double reale2, Double immaginario1, Double immaginario2) {
+        operationsCompleted++;
+        lastResultReale = reale1 + reale2;
+        lastResultImmginario = immaginario1 + immaginario2;
+    }
+
+    public Double complexSub (Double reale1, Double reale2, Double immaginario1, Double immaginario2) {
+        operationsCompleted++;
+        lastResultReale = reale1 - reale2;
+        lastResultImmginario = immaginario1 - immaginario2;
+    }
+
+    public Double complexMulti (Double reale1, Double reale2, Double immaginario1, Double immaginario2) {
+        operationsCompleted++;
+        
+    }
+
+
+
+
+
+
+}

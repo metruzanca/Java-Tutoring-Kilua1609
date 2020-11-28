@@ -22,41 +22,42 @@ class Animal {
   String name;
   int age;
   int legs;
-  public Animal(String name, int age, int legs){
+
+  public Animal(String name, int age, int legs) {
     this.name = name;
     this.age = age;
     this.legs = legs;
   }
 
   @Override
-  public String toString(){
+  public String toString() {
     return "Animal " + name;
   }
 
-  public void walk(){
+  public void walk() {
     System.out.println("I am walking");
   }
 
-  public void speak(){
+  public void speak() {
     System.out.println("I am some animal");
   }
 }
 
-class Doggo extends Animal{
-  public String name;
+class Doggo extends Animal {
+  private String name;
 
-  public Doggo(String name, int age, int legs){
+  public Doggo(String name, int age, int legs) {
     super("Doggo", age, 4);
     this.name = name;
   }
 
   @Override
   public String toString() {
-      return "Animal race: " + super.name + ", " + name;
+    return "Animal race: " + super.name + ", " + name;
   }
 
   @Override
-  public void speak(){
+  public void speak() {
     System.out.println("I am a cute fluffy doggo!");
   }
 }
@@ -66,13 +67,13 @@ interface Computer {
 }
 
 class PC implements Computer {
-  public void powerOn(){
+  public void powerOn() {
     System.out.println("Im a PC and I'm turning on.");
   }
 }
 
 class MAC implements Computer {
-  public void powerOn(){
+  public void powerOn() {
     System.out.println("Im a MAC and I'm turning on.");
   }
 }
