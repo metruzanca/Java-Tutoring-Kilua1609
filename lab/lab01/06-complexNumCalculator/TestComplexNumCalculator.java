@@ -53,6 +53,11 @@ class CompleNumeCalculator {
         lastResultImmginario = immaginario1 - immaginario2;
     }
 
+    public Double complexMulti (Double reale1, Double reale2, Double immaginario1, Double immaginario2) {
+        operationsCompleted++;
+        
+    }
+
 
 
 
