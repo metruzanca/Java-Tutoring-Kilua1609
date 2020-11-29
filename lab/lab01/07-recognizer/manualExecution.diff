@@ -1,0 +1,34 @@
++ set sequence1 = 1 2 3 4 1 2 5
+
+Recognizer constructor:
++ set position = 0
++ set sequence = sequence1
+
+loop 1:
+  nextInSequence:
+-   get position is 0
+-   get sequence in position 0, aka 2
+    returns 1st value, aka 1
+  check(1):
+    next is equal to value, so:
++     set position = 1
+      return true
+loop 2:
+  nextInSequence:
+-   get position is 1
+-   get sequence in position 1, aka 2
+    return 2nd value, aka 2
+  check(2):
+    next is equal to value, so:
++     set position = 2
+      return true
+
+loop 7:
+  nextInSequence:
+-   get position is ?
+-   get sequence in position ?, aka ?
+    return 2nd value, aka ?
+  check(2):
+    next is equal to value, so:
++     set position = ?
+      return false

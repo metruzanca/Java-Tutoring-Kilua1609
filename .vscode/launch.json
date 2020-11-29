@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - TestRecognizer",
+      "request": "launch",
+      "mainClass": "TestRecognizer",
+      "projectName": "lab01"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - TestComplexNumCalculator",
+      "request": "launch",
+      "mainClass": "TestComplexNumCalculator",
+      "projectName": "lab01"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - TestComplexNum",
       "request": "launch",
       "mainClass": "TestComplexNum",

@@ -16,51 +16,66 @@ class TestComplexNumCalculator {
          *
          * 3) Fare altre prove con operazioni a piacere
          */
+        CompleNumeCalculator calc = new CompleNumeCalculator();
+        ComplexNum n1 = new ComplexNum(1, 2);
+        ComplexNum n2 = new ComplexNum(10, 20);
+        ComplexNum n3 = new ComplexNum(5, 5);
+        ComplexNum r1 = calc.add(n1, n2);
+        ComplexNum r2 = calc.sub(r1, n3);
+        System.out.println(r1);
+        System.out.println(r2);
+
+        ComplexNum m1 = new ComplexNum(2, 5);
+        ComplexNum m2 = new ComplexNum(4, -3);
+        ComplexNum r3 = calc.mul(m1, m2);
+        System.out.println(r3);
+        ComplexNum r4 = calc.div(r3, m2);
+        System.out.println(r4);
     }
 }
 
 class CompleNumeCalculator {
-    int operationsCompleted;
-    Double lastResultReale;
-    Double lastResultImmginario;
-    Double reale1;
-    Double immaginario1;
-    Double real2;
-    Double immaginario2;
+  int operationsCompleted;
+  ComplexNum lastResult;
 
-    public void CalculatorVariables () {
+    public CompleNumeCalculator(){
+        lastResult = null;
         operationsCompleted = 0;
-        lastResultReale = 0.0;
-        lastResultImmginario = 0.0;
     }
 
-    public void ComplexNumber(Double reale1, Double reale2 Double immaginario1, Double immaginario2) {
-        this.reale1 = reale1;
-        this.immaginario1 = immaginario1;
-        this.real2 = reale2;
-        this.immaginario2 = immaginario2;
-    }
-
-    public Double complexAdd (Double reale1, Double reale2, Double immaginario1, Double immaginario2) {
+    public ComplexNum add(ComplexNum addendo1, ComplexNum addendo2){
         operationsCompleted++;
-        lastResultReale = reale1 + reale2;
-        lastResultImmginario = immaginario1 + immaginario2;
+        ComplexNum result = new ComplexNum(0, 0);
+        result.add(addendo1);
+        result.add(addendo2);
+        lastResult = result;
+        return result;
     }
 
-    public Double complexSub (Double reale1, Double reale2, Double immaginario1, Double immaginario2) {
+    public ComplexNum sub(ComplexNum minuendo, ComplexNum sottraendo) {
         operationsCompleted++;
-        lastResultReale = reale1 - reale2;
-        lastResultImmginario = immaginario1 - immaginario2;
+        ComplexNum result = new ComplexNum(0, 0);
+        result.add(minuendo);
+        result.sub(sottraendo);
+        lastResult = result;
+        return result;
     }
 
-    public Double complexMulti (Double reale1, Double reale2, Double immaginario1, Double immaginario2) {
-        operationsCompleted++;
-        
-    }
+  public ComplexNum mul (ComplexNum moltiplicando, ComplexNum multiplicatore) {
+    operationsCompleted++;
+    ComplexNum result = new ComplexNum(0, 0);
+    result.add(moltiplicando);
+    result.mol(multiplicatore);
+    lastResult = result;
+    return result;
+  }
 
-
-
-
-
-
+  public ComplexNum div (ComplexNum dividendo, ComplexNum divisore) {
+    operationsCompleted++;
+    ComplexNum result = new ComplexNum(0, 0);
+    result.add(dividendo);
+    result.div(divisore);
+    lastResult = result;
+    return result;
+  }
 }
