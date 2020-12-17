@@ -42,8 +42,8 @@ class TestRecognizer {
           *
           */
           int[] sequence1 = new int[] {1,2,3,4,1,2,5};
-          // int[] sequence2 = new int[] {1,2,3,4};
-          // int[] sequence3 = new int[] {1,2,3,4,5,2,3};
+           //int[] sequence2 = new int[] {1,2,3,4};
+          //int[] sequence3 = new int[] {1,2,3,4,5,2,3};
 
           Recognizer rec = new Recognizer(sequence1);
 

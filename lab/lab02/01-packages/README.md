@@ -13,5 +13,5 @@
 7. Si esegua la classe usando il comando: `java -cp bin ComplexNum`
   - Oh-oh... errore. Perché? Si provi a comprenderne la ragione e a correggere il comando.
 8. Si punti il terminale in `bin/oop/lab02/math/`
-9. Si provi ad eseguire la classe usando il comando: `java ComplexNum`
+9. Si provi ad eseguire la classe usando il comando: `cd`
   - Oh-oh... errore. Perché? Eppure il file `ComplexNum.class` è proprio lì. Si provi a comprenderne la ragione e a correggere il comando.

@@ -7,10 +7,17 @@ public class Student {
     int id;
     int matriculationYear;
 
-    void build(final int id, final String name, final String surname, final int matriculationYear) {
-        this.id = id;
+    // void build(final int id, final String name, final String surname, final int matriculationYear) {
+    //     this.id = id;
+    //     this.name = name;
+    //     this.surname = surname;
+    //     this.matriculationYear = matriculationYear;
+    // }
+
+    public Student(String name, String surname, int id, int matriculationYear) {
         this.name = name;
         this.surname = surname;
+        this.id = id;
         this.matriculationYear = matriculationYear;
     }
 
@@ -21,22 +28,22 @@ public class Student {
         System.out.println("Student matriculationYear: " + this.matriculationYear + "\n");
     }
 
-    public static void main(final String[] args) {
-        Student student = new Student();
-        student.build(1014, "Mario", "Rossi", 2013);
-        student.printStudentInfo();
+    // public static void main(final String[] args) {
+    //     Student student = new Student();
+    //     student.build(1014, "Mario", "Rossi", 2013);
+    //     student.printStudentInfo();
 
-        student = new Student();
-        student.build(1015, "Luigi", "Gentile", 2012);
-        student.printStudentInfo();
+    //     student = new Student();
+    //     student.build(1015, "Luigi", "Gentile", 2012);
+    //     student.printStudentInfo();
 
-        student = new Student();
-        student.build(1016, "Simone", "Bianchi", 2010);
-        student.printStudentInfo();
+    //     student = new Student();
+    //     student.build(1016, "Simone", "Bianchi", 2010);
+    //     student.printStudentInfo();
 
-        student = new Student();
-        student.build(1017, "Andrea", "Bracci", 2012);
-        student.printStudentInfo();
+    //     student = new Student();
+    //     student.build(1017, "Andrea", "Bracci", 2012);
+    //     student.printStudentInfo();
 
-    }
+    // }
 }

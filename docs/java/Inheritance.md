@@ -1,7 +1,10 @@
 # Inheritance
+Prima di definire l'eriditariabilità dobbiamo definire l'incapsulamento.
+L'incapsulamento è la possibilità del linguaggio di programmazione ad
+oggetti di accorpare metodi e proprietà all'interno di un unica area
+(oggetto), che ci permetteà quindi di dividere il nostro programma in
+tante piccole parti ognuna con diverse funzionalità.
 
-L'inheritance (o ereditarietà) è uno dei tre pinnacoli fondamentali dell'object oriented,
-insieme al polimorfismo, le interfaccie e l'incapsulamento.
 
 L'inheritance è un meccanismo che ci consente di creare una nuova clase,
 facendole ereditare i meotdi e i campi di un altra classe già esistente

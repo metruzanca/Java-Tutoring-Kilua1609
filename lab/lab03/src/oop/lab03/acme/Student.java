@@ -34,10 +34,10 @@ public class Student implements User {
     }
 
     public String toString() {
-        return "Student [name=" + this.name
-                + ", surname=" + this.surname
-                + ", id=" + this.id + ", matriculationYear="
-                + this.matriculationYear + "]";
+        return String.format(
+            "Student [name=%s, surname=%s, id=%s, matriculationYear=%s]",
+            this.name, this.surname, this.id, this.matriculationYear
+        );
     }
 
     public String getUsername() {
@@ -52,3 +52,19 @@ public class Student implements User {
         return this.toString();
     }
 }
+
+/*
+    StringBuilder url = new StringBuilder();
+    url.append("Stundent [name=");
+    url.append(this.name);
+    url.append(", surname=");
+    url.append(this.name);
+    url.append("Stundent [name=");
+    url.append(this.name);
+    url.append("Stundent [name=");
+    url.append(this.name);
+    url.append("Stundent [name=");
+    url.append(this.name);
+
+    url.toString()
+*/

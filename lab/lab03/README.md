@@ -13,7 +13,7 @@
     - Si rendano privati tuttti i campi
     - Si introducano selettori opportuni per recuperare o modificare le proprietà di interesse
 
-#### Il metodo `toString()`
+#### Il metodo `toString()` ???????????????????
 
 * Analizzare `AccountHolder` contenuta nel package `oop.lab03.bank`
 * Modella un generico utilizzatore di conto bancario, identificato da un id

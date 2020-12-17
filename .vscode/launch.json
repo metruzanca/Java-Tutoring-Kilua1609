@@ -6,6 +6,76 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - WorkWithShapes",
+      "request": "launch",
+      "mainClass": "WorkWithShapes",
+      "projectName": "lab03"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Testing",
+      "request": "launch",
+      "mainClass": "oop.lab03.acme.Testing",
+      "projectName": "lab03"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - TestBankAccount",
+      "request": "launch",
+      "mainClass": "oop.lab03.bank.interfaces.TestBankAccount",
+      "projectName": "lab03"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - TestSimpleBankAccount",
+      "request": "launch",
+      "mainClass": "oop.lab03.bank.TestSimpleBankAccount",
+      "projectName": "lab03"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - WorkWithArrays",
+      "request": "launch",
+      "mainClass": "oop.lab02.arrays.WorkWithArrays",
+      "projectName": "lab02"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Smartphone",
+      "request": "launch",
+      "mainClass": "oop.lab02.constructors.Smartphone",
+      "projectName": "lab02"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - UseConstructorsEvolved",
+      "request": "launch",
+      "mainClass": "oop.lab02.constructors.UseConstructorsEvolved",
+      "projectName": "lab02"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - UseConstructors",
+      "request": "launch",
+      "mainClass": "oop.lab02.constructors.UseConstructors",
+      "projectName": "lab02"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - CallByValue",
+      "request": "launch",
+      "mainClass": "CallByValue",
+      "projectName": "lab02"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Calculator",
+      "request": "launch",
+      "mainClass": "Calculator",
+      "projectName": "lab02"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - TestRecognizer",
       "request": "launch",
       "mainClass": "TestRecognizer",

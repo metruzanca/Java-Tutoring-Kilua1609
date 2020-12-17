@@ -3,6 +3,9 @@ package oop.lab02.cli;
 public class TestCommandLine {
 
     public static void main(final String[] args) {
+        for (int i = 0; i < args.length; i++) {
+            System.out.println(args[i] + ", " + args[i].length() + " characters long");
+        }
         /*
          * Write the main method in such a way that it iterates through the
          * array of arguments, printing each one along with the length of the

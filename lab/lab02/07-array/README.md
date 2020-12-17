@@ -8,7 +8,7 @@
 3. Si aggiunga un nuovo test al metodo `testCountOccurr()`
 4. Si compili e si esegua nuovamente
 5. Si completino i seguenti metodi statici nella classe `WorkWithArrays`:
-  - `public static int[] evenElements(int[] array)`, che restituisce un array con i soli elementi in posizione (indice) *pari* dell'array fornito in input, ad esempio `evenElems([1, 2, 3, 4]) => [1, 3]`
+  - `public static int[] evenElements(int[] array)`, che restituisce un array con i soli elementi in posizione (indice) *pari* dell'array fornito in input, ad esempio `evenElems([1, 2, 3, 4]) => [1,3]`
   - `public static int[] oddElements(int[] array)` che restituisce un array con i soli elementi in posizione (indice) *dispari* dell'array fornito in input, ad esempio `oddElems([1, 2, 3, 4] => [2,4]`
   - `public static int mostRecurringElement(int[] array)` che restituisce l'elemento che viene ripetuto più volte all'interno `array`, ad esempio p.e. `mostRecurringElement([1, 2, 1, 3, 4] => 1`, `mostRecurringElement([7,1,5,7,7,9]) => 7`
 

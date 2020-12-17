@@ -2,18 +2,21 @@ package oop.lab02.constructors;
 
 public class Smartphone {
 
-    public static final boolean DEF_HAS_GPS = true;
-    public static final boolean DEF_HAS_3G = true;
-    public static final boolean DEF_HAS_NFC = true;
     public static final int DEF_SD_SIZE = 8192;
     public static final int DEF_RAM_SIZE = 1024;
     public static final int DEF_N_CPU = 2;
 
+    public static final boolean DEF_HAS_GPS = true;
+    public static final boolean DEF_HAS_3G = true;
+    public static final boolean DEF_HAS_NFC = true;
+
+    public String brand;
+    public String model;
+
     public int nCPU;
     public int ram;
     public int sdSize;
-    public String brand;
-    public String model;
+
     public boolean hasGPS;
     public boolean has3G;
     public boolean hasNFC;
@@ -29,19 +32,67 @@ public class Smartphone {
         System.out.println("hasNFC: " + this.hasNFC + "\n");
     }
 
+    public Smartphone(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public Smartphone(String brand, String model, int sdSize, boolean hasGPS, boolean has3g) {
+        this.brand = brand;
+        this.model = model;
+        this.sdSize = sdSize;
+        this.hasGPS = hasGPS;
+        this.has3G = has3g;
+    }
+
+    public Smartphone(String brand, String model, int sdSize) {
+        this.brand = brand;
+        this.model = model;
+        this.sdSize = sdSize;
+    }
+
+    public Smartphone(String brand, String model, boolean hasNFC) {
+        this.brand = brand;
+        this.model = model;
+        this.hasNFC = hasNFC;
+    }
+    
+    public Smartphone (
+        String brand,
+        String model,
+        int nCPU,
+        int ram,
+        int sdSize,
+        boolean hasGPS,
+        boolean has3G,
+        boolean hasNFC
+    ) {
+        this.brand = brand;
+        this.model = model;
+        this.nCPU = nCPU;
+        this.ram = ram;
+        this.sdSize = sdSize;
+        this.hasGPS = hasGPS;
+        this.has3G = has3G;
+        this.hasNFC = hasNFC;
+    }
+
     public static void main(final String[] args) {
-        /*
-         * 1) Creare lo smarthpone HTC One sdSize:1024
-         * 
-         * 2) Creare lo smarthpone Samsung Galaxy Note 3 nCPU:4 ram:2048
-         * sdSize:8192 gps:true nfc:true 3g:true
-         * 
-         * 3) Creare lo smarthpone iPhone 5S nfc:false
-         * 
-         * 4) Creare lo smarthpone Google Nexus 4 gps:true 3g:true
-         * 
-         * 5) Utilizzare il metodo printStringRep per stampare in standard
-         * output le informazioni di ciascun telefono
-         */
+       
+        // 1) Creare lo smarthpone HTC One sdSize:1024
+        Smartphone htcOne = new Smartphone("HTC", "One", 1024);
+        // 2) Creare lo smarthpone Samsung Galaxy Note 3 nCPU:4 ram:2048
+        //    sdSize:8192 gps:true nfc:true 3g:true
+        Smartphone samsung = new Smartphone("Samsung", "Galaxy Note 3", 4, 2048, 8192, true, true, true);
+        // 3) Creare lo smarthpone iPhone 5S nfc:false
+        Smartphone iPhone = new Smartphone("Apple", "iPhone 5s", false);
+        // 4) Creare lo smarthpone Google Nexus 4 gps:true 3g:true 64 * 1024
+        Smartphone google = new Smartphone("Google", "Nexus 4", 64 * 1024, true, true);
+        // 5) Utilizzare il metodo printStringRep per stampare in standard
+        //    output le informazioni di ciascun telefono
+        htcOne.printStringRep();
+        samsung.printStringRep();
+        iPhone.printStringRep();
+        google.printStringRep();
     }
 }

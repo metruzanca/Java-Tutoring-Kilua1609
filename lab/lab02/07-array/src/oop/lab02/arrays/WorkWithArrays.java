@@ -1,5 +1,6 @@
 package oop.lab02.arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class WorkWithArrays {
@@ -24,54 +25,89 @@ public class WorkWithArrays {
         return nOccur;
     }
 
-    public static int[] evenElements(final int[] array) {
-        return new int[] {};
+    // 1,2,3 -> [2]
+    // 2,3,4 -> [2,4]
+
+    public static Integer[] evenElements(final int[] array) {
+        ArrayList<Integer> even = new ArrayList<Integer>();
+        for (int i = 0; i < array.length; i++) {
+            if(i % 2 == 0)
+                even.add(array[i]);
+        }
+        return even.toArray(new Integer[even.size()]);
     }
 
-    public static int[] oddElements(final int[] array) {
-        return new int[] {};
+    public static Integer[] oddElements(final int[] array) {
+        ArrayList<Integer> odd = new ArrayList<Integer>();
+        for (int i = 0; i < array.length; i++) {
+            if(i % 2 == 1)
+                odd.add(array[i]);
+        }
+        return odd.toArray(new Integer[odd.size()]);
     }
 
     public static int mostRecurringElement(final int[] array) {
-        return 0;
+        ArrayList<Integer> counters = new ArrayList<Integer>();
+        for (int i = 0; i < array.length; i++) {
+            int value = array[i];
+            counters.set(value, counters.get(value) + 1);
+        }
+        int max = 0;
+        for (int i = 0; i < counters.size(); i++) {
+            if (counters.get(i) > max) {
+                max = counters.get(i);
+            }
+        }
+        return max;     
     }
 
     /*
      * Testing methods
      */
 
+    public static boolean expects(int actual, int expected){
+        if(actual != expected){
+            System.out.println("Expected: " + expected);
+            System.out.println("Actual: " + actual);
+        }
+        return actual == expected;
+    }
+
     public static boolean testCountOccurrencies() {
-        return countOccurrencies(new int[] { 1, 2, 3, 4 }, 1) == 1
-                && countOccurrencies(new int[] { 0, 2, 3, 4 }, 1) == 0
-                && countOccurrencies(new int[] { 7, 4, 1, 9, 3, 1, 5 }, 2) == 0
-                && countOccurrencies(new int[] { 1, 2, 1, 3, 4, 1 }, 1) == 3;
+        return expects(countOccurrencies(new int[] { 1, 2, 3, 4 }, 1), 1)
+                && expects(countOccurrencies(new int[] { 0, 2, 3, 4 }, 1), 0)
+                && expects(countOccurrencies(new int[] { 7, 4, 1, 9, 3, 1, 5 }, 2), 0)
+                && expects(countOccurrencies(new int[] { 1, 2, 1, 3, 4, 1 }, 1), 3)
+                && expects(countOccurrencies(new int[] {7, 1, 5, 6, 1, 3}, 1), 2);
     }
 
     public static boolean testEvenElements() {
-        return Arrays.equals(evenElements(new int[] { 1, 2, 3, 4 }), new int[] { 1, 3 })
+        return Arrays.equals(
+                        evenElements(new int[] { 1, 2, 3, 4 }),
+                        new Integer[] { 1, 3 })
                 && Arrays.equals(
                         evenElements(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }),
-                        new int[] { 1, 3, 5, 7, 9 })
+                        new Integer[] { 1, 3, 5, 7, 9 })
                 && Arrays.equals(
                         evenElements(new int[] { 4, 6, 7, 9, 1, 5, 23, 11, 73 }),
-                        new int[] { 4, 7, 1, 23, 73 })
+                        new Integer[] { 4, 7, 1, 23, 73 })
                 && Arrays.equals(
                         evenElements(new int[] { 7, 5, 1, 24, 12, 46, 23, 11, 54, 81 }),
-                        new int[] { 7, 1, 12, 23, 54 });
+                        new Integer[] { 7, 1, 12, 23, 54 });
     }
 
     public static boolean testOddElements() {
         return Arrays.equals(oddElements(new int[] { 1, 2, 3, 4 }),
-                new int[] { 2, 4 })
+                new Integer[] { 2, 4 })
                 && Arrays.equals(
                         oddElements(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }),
-                        new int[] { 2, 4, 6, 8 })
+                        new Integer[] { 2, 4, 6, 8 })
                 && Arrays.equals(
                         oddElements(new int[] { 4, 6, 7, 9, 1, 5, 23, 11, 73 }),
-                        new int[] { 6, 9, 5, 11 })
+                        new Integer[] { 6, 9, 5, 11 })
                 && Arrays.equals(
                         oddElements(new int[] { 7, 5, 1, 24, 12, 46, 23, 11, 54, 81 }),
-                        new int[] { 5, 24, 46, 11, 81 });
+                        new Integer[] { 5, 24, 46, 11, 81 });
     }
 
     public static boolean testMostRecurringElement() {
