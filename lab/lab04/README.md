@@ -28,11 +28,12 @@ Create from scratch a class `RestrictedBankAccount extends AbstractBankAccount`,
 
 Answer the following question:
 
-> Is this design in you opinion better or worse than the previous one? Why?
+> Is this design in you opinion better or worse than the previous one? better Why? much less code
+duplication.
 
 ### Extension of existing software with provided design
 
-Take a look at the contents of `it.unibo.oop.lab04.robot.base`. It contains classes and interfaces modeling a robot that can move into an environment. Use the UML in [`uml-robot-base.png`](uml-robot-base.png) (located in the project root, along this README file) to understand how the system is designed, and use `TestRobots` to better understand how it works.
+Take a look at the contents of `it.unibo.oop.lab04.robot.base`. It contains classes and interfaces modeling a robot that can move into an environment. Use the UML in ![uml-robot-base.png](uml-robot-base.png) (located in the project root, along this README file) to understand how the system is designed, and use `TestRobots` to better understand how it works.
 
 Using (without modifying) the existing classes, and using the provided UML design scheme in [`uml-robot-with-arms.jpg`](uml-robot-with-arms.jpg) create in the package `it.unibo.oop.lab04.robot.arms` a new `interface RobotWithArms extends Robot` with:
 * `boolean pickUp()`: picks an object, returns `true` if the action is successful

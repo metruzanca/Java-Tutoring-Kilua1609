@@ -3,10 +3,10 @@ package it.unibo.oop.lab04.robot.test;
 /*
  * TODO: Uncomment the imports
  */
-//import it.unibo.oop.lab04.robot.arms.RobotWithArms;
-//import it.unibo.oop.lab04.robot.arms.RobotWithTwoArms;
-//import it.unibo.oop.lab04.robot.base.BaseRobot;
-//import it.unibo.oop.lab04.robot.base.RobotPosition;
+import it.unibo.oop.lab04.robot.arms.RobotWithArms;
+import it.unibo.oop.lab04.robot.arms.RobotWithTwoArms;
+import it.unibo.oop.lab04.robot.base.BaseRobot;
+import it.unibo.oop.lab04.robot.base.RobotPosition;
 
 /**
  * Utility class for testing componible robots
@@ -19,10 +19,10 @@ public final class TestRobotWithArms {
     private TestRobotWithArms() {
     }
 
-    private static void assertEquality(final String propertyName, final Object expected, final Object actual) {
+    private static void assertEquality(final String propertyName, final Object expected, final Object actual, final int pos) {
         if (actual == null || !actual.equals(expected)) {
             System.out.println(propertyName + " was expected to be " + expected
-                    + ", but it yields " + actual + " (ERROR!)");
+                    + ", but it yields " + actual + " (ERROR!) " + pos);
         } else {
             System.out.println(propertyName + ": " + actual + " (CORRECT)");
         }
@@ -36,40 +36,40 @@ public final class TestRobotWithArms {
          * 
          * Control + Shift + 7 (With an Italian keyboard...)
          */
-//        final RobotWithArms walle = new RobotWithTwoArms("Wall-e");
-//        final String wallePosition = walle + "'s position";
-//        final String walleItems = walle + "'s items carried";
-//        final String walleConsumption = walle + "'s consumption is correct";
-//        assertEquality(wallePosition, new RobotPosition(0, 0), walle.getPosition());
-//        assertEquality(walleConsumption, BaseRobot.BATTERY_FULL, walle.getBatteryLevel());
-//        double consumptionEmpty = walle.getBatteryLevel();
-//        for (int i = 0; i < CYCLES; i++) {
-//            walle.moveRight();
-//        }
-//        consumptionEmpty -= walle.getBatteryLevel();
-//        walle.pickUp();
-//        assertEquality(walleItems, 1, walle.getCarriedItemsCount());
-//        double consumption1Item = walle.getBatteryLevel();
-//        for (int i = 0; i < CYCLES; i++) {
-//            walle.moveUp();
-//        }
-//        consumption1Item -= walle.getBatteryLevel();
-//        assertEquality(walleConsumption, true, consumption1Item > consumptionEmpty);
-//        walle.pickUp();
-//        assertEquality(walleItems, 2, walle.getCarriedItemsCount());
-//        double consumption2Item = walle.getBatteryLevel();
-//        for (int i = 0; i < CYCLES; i++) {
-//            walle.moveUp();
-//        }
-//        consumption2Item -= walle.getBatteryLevel();
-//        assertEquality(walleConsumption, true, consumption2Item > consumption1Item);
-//        walle.pickUp();
-//        assertEquality(walleItems, 2, walle.getCarriedItemsCount());
-//        walle.dropDown();
-//        assertEquality(walleItems, 1, walle.getCarriedItemsCount());
-//        walle.dropDown();
-//        assertEquality(walleItems, 0, walle.getCarriedItemsCount());
-//        walle.dropDown();
-//        assertEquality(walleItems, 0, walle.getCarriedItemsCount());
+       final RobotWithArms walle = new RobotWithTwoArms("Wall-e");
+       final String wallePosition = walle + "'s position";
+       final String walleItems = walle + "'s items carried";
+       final String walleConsumption = walle + "'s consumption";
+       assertEquality(wallePosition, new RobotPosition(0, 0), walle.getPosition(), 43);
+       assertEquality(walleConsumption, BaseRobot.BATTERY_FULL, walle.getBatteryLevel(), 44);
+       double consumptionEmpty = walle.getBatteryLevel();
+       for (int i = 0; i < CYCLES; i++) {
+           walle.moveRight();
+       }
+       consumptionEmpty -= walle.getBatteryLevel();
+       walle.pickUp();
+       assertEquality(walleItems, 1, walle.getCarriedItemsCount(), 51);
+       double consumption1Item = walle.getBatteryLevel();
+       for (int i = 0; i < CYCLES; i++) {
+           walle.moveUp();
+       }
+       consumption1Item -= walle.getBatteryLevel();
+       assertEquality(walleConsumption, true, consumption1Item > consumptionEmpty, 57);
+       walle.pickUp();
+       assertEquality(walleItems, 2, walle.getCarriedItemsCount(), 59);
+       double consumption2Item = walle.getBatteryLevel();
+       for (int i = 0; i < CYCLES; i++) {
+           walle.moveUp();
+       }
+       consumption2Item -= walle.getBatteryLevel();
+       assertEquality(walleConsumption, true, consumption2Item > consumption1Item, 65);
+       walle.pickUp();
+       assertEquality(walleItems, 2, walle.getCarriedItemsCount(), 67);
+       walle.dropDown();
+       assertEquality(walleItems, 1, walle.getCarriedItemsCount(), 69);
+       walle.dropDown();
+       assertEquality(walleItems, 0, walle.getCarriedItemsCount(), 71);
+       walle.dropDown();
+       assertEquality(walleItems, 0, walle.getCarriedItemsCount(), 73);
     }
 }

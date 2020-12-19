@@ -17,7 +17,7 @@ public class StrictBankAccount implements BankAccount {
 
     private boolean checkUser(final int id) {
         return this.usrID == id;
-    }
+    }//comune
 
     public void computeManagementFees(final int usrID) {
         final double feeAmount = MANAGEMENT_FEE + (nTransactions * StrictBankAccount.TRANSACTION_FEE);
@@ -25,27 +25,27 @@ public class StrictBankAccount implements BankAccount {
             balance -= feeAmount;
             nTransactions = 0;
         }
-    }
+    }//comune
 
     public void deposit(final int usrID, final double amount) {
         this.transactionOp(usrID, amount);
-    }
+    }//comune
 
     public void depositFromATM(final int usrID, final double amount) {
         this.deposit(usrID, amount - StrictBankAccount.ATM_TRANSACTION_FEE);
-    }
+    }//comune
 
     public double getBalance() {
         return this.balance;
-    }
+    }//comune
 
     public int getNTransactions() {
         return nTransactions;
-    }
+    }//comune
 
     private void incTransactions() {
         nTransactions++;
-    }
+    }//comune
 
     private boolean isWithdrawAllowed(final double amount) {
         return balance > amount;
@@ -56,15 +56,15 @@ public class StrictBankAccount implements BankAccount {
             this.balance += amount;
             this.incTransactions();
         }
-    }
+    }//comune
 
     public void withdraw(final int usrID, final double amount) {
         if (isWithdrawAllowed(amount)) {
             this.transactionOp(usrID, -amount);
         }
-    }
+    }//comune
 
     public void withdrawFromATM(final int usrID, final double amount) {
         this.withdraw(usrID, amount + StrictBankAccount.ATM_TRANSACTION_FEE);
     }
-}
+}//comune

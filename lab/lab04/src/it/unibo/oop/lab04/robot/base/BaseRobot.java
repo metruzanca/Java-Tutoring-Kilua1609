@@ -56,7 +56,7 @@ public class BaseRobot implements Robot {
      * @return The robot's current battery level
      */
     public double getBatteryLevel() {
-        return Math.round(batteryLevel * 100d) / BATTERY_FULL;
+        return batteryLevel;
     }
 
     /**

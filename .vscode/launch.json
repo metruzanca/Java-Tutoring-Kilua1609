@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch TestRobotWithArms",
+      "request": "launch",
+      "mainClass": "it.unibo.oop.lab04.robot.test.TestRobotWithArms",
+      "projectName": "lab04"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - WorkWithShapes",
       "request": "launch",
       "mainClass": "WorkWithShapes",
